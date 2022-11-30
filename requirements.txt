@@ -1,17 +1,7 @@
-import pandas as pd
-import streamlit as st
-import seaborn as sns
-import numpy as np
-import matplotlib.pyplot as plt
-import plotly.express as px
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-from plotly.offline import plot, iplot, init_notebook_mode
-import plotly.graph_objects as go
-from scipy.stats import pearsonr 
-
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-
+pandas
+streamlit
+numpy
+plotly
+matplotlib
+seaborn
+scipy
