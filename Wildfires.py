@@ -17,10 +17,6 @@ from plotly.offline import plot, iplot, init_notebook_mode
 import plotly.graph_objects as go
 from scipy.stats import pearsonr 
 
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
 
 st.sidebar.title("Sommaire")
 
