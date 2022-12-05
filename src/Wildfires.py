@@ -15,7 +15,8 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from plotly.offline import plot, iplot, init_notebook_mode
 import plotly.graph_objects as go
-from scipy.stats import pearsonr 
+from scipy.stats import pearsonr
+import zipfile
 
 PATH_TO_ASSET="src/asset"
 PATH_TO_DATASET="src/dataset"
@@ -24,7 +25,6 @@ st.sidebar.title("Sommaire")
 
 pages = ["Introduction", "Exploration du dataset", "Data Visualisation", "Modélisation", "Conclusion"]
 page = st.sidebar.radio("Aller vers", pages)
-
 
 if page == pages[0]:
     st.title("Projet Wildfire")
@@ -179,7 +179,10 @@ if page==pages[2]:
     with header:
         
         st.subheader('Data Visualisation')
-                
+
+        with zipfile.ZipFile(PATH_TO_DATASET + "/clean_data.zip", 'r') as zip_ref:
+            zip_ref.extractall(PATH_TO_DATASET)
+
         df = pd.read_csv(PATH_TO_DATASET + "/clean_data.csv")
 
         # Mise en parallèle du nombre d'incendies et du nombre d'hectares brûlés
