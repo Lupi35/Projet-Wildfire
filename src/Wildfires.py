@@ -17,8 +17,8 @@ from plotly.offline import plot, iplot, init_notebook_mode
 import plotly.graph_objects as go
 from scipy.stats import pearsonr 
 
-PATH_TO_ASSET="asset"
-PATH_TO_DATASET="dataset"
+PATH_TO_ASSET="src/asset"
+PATH_TO_DATASET="src/dataset"
 
 st.sidebar.title("Sommaire")
 
